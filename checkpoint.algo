@@ -1,0 +1,25 @@
+ALGORITHM count_sentence
+VAR
+    chaine: STRING;
+    character , word, vowel, i: INTEGER:=0;
+BEGIN
+    Read(chaine);
+    word:=1;
+    
+    FOR i FROM 0 TO chaine.Length STEP 1  DO
+        WHILE (chaine[i] !=".") DO
+            character=character+1;
+            IF (chaine[i] =" ") THEN
+                word=word+1;
+            END_IF
+            IF (chaine[i]= "a" OR "o" OR "word" OR "e" OR "i" OR "u") THEN
+                vowel=vowel+1;
+            END_IF
+            
+        END_WHILE
+    END_FOR
+    Write(character);
+    Write(word);
+    Write(vowel);
+    
+END
